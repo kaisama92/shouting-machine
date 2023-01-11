@@ -8,6 +8,7 @@ function getAndSetEchoValues(){
   document.getElementById("echo").innerText = wordsId;
   
 }
+
 function increaseFontSize(id, increaseFactor){
   txt = document.getElementById(id);
   style = window.getComputedStyle(txt, null).getPropertyValue('font-size');
@@ -28,16 +29,11 @@ function setFormSubmitHandler(){
     // increased fontSize();
     document.querySelector("p#echo").removeAttribute("class"); // place on HTML to display words
     // save a variable for font size i
-    let newfont = 5 // + "em"
-    document.querySelector("#echo").style.fontSize = newfont + "em";
+    // let newfont = 5 // + "em"
+    // document.querySelector("#echo").style.fontSize = newfont + "em";
+    increaseFontSize("echo", 50);
     // increased font size
-    /*let buttonFont =document.querySelector("button#button-font");
-    buttonFont.addEventListener("click", function(){
-      document.querySelector("#echo").style.fontSize = newfont * 2;
-    });
-    */
-    
-    // return newfont;
+
   }
 }
 
@@ -48,7 +44,7 @@ window.onload = function(){
   //   let newfont2 = newfont * 2;
   //   console.log("New Sub: newfont", newfont);
   //   document.querySelector("#echo").style.fontSize = newfont2;
-  // }
+}
 // }
 // function increaseFontSize(id, increaseFactor){
 //   txt = document.getElementById(id);
