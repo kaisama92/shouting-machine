@@ -8,7 +8,12 @@ function getAndSetEchoValues(){
   document.getElementById("echo").innerText = wordsId;
   
 }
-
+function increaseFontSize(id, increaseFactor){
+  txt = document.getElementById(id);
+  style = window.getComputedStyle(txt, null).getPropertyValue('font-size');
+  currentSize = parseFloat(style);
+  txt.style.fontSize = (currentSize + increaseFactor) + 'px';
+}
 // // increased font size
 // function increaseFont(wordsId) {
 
@@ -31,7 +36,6 @@ function setFormSubmitHandler(){
       document.querySelector("#echo").style.fontSize = newfont * 2;
     });
     */
-   newfont *= 2;
     
     // return newfont;
   }
@@ -45,10 +49,17 @@ window.onload = function(){
   //   console.log("New Sub: newfont", newfont);
   //   document.querySelector("#echo").style.fontSize = newfont2;
   // }
-}
+// }
+// function increaseFontSize(id, increaseFactor){
+//   txt = document.getElementById(id);
+//   style = window.getComputedStyle(txt, null).getPropertyValue('font-size');
+//   currentSize = parseFloat(style);
+//   txt.style.fontSize = (currentSize + increaseFactor) + 'px';
+// }
 
-let button2 = document.querySelector("button")
-button2.onsubmit = function(){
-  let echo = document.querySelector("#echo");
-  echo.style.fontSize() ;  
-}
+// function increaseFontSizeBy50px(){
+//   let txt = document.getElementById('p');
+//   let style = window.getComputedStyle(txt, null).getPropertyValue('font-size');
+//   let currentSize = parseFloat(style);
+//   txt.style.fontSize = (currentSize + 50) + 'px';
+// }
