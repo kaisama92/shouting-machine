@@ -31,6 +31,7 @@ function setFormSubmitHandler(){
       document.querySelector("#echo").style.fontSize = newfont * 2;
     });
     */
+   newfont *= 2;
     
     // return newfont;
   }
@@ -46,8 +47,8 @@ window.onload = function(){
   // }
 }
 
-let button = document.querySelector("button")
-button.onclick = function(){
+let button2 = document.querySelector("button")
+button2.onsubmit = function(){
   let echo = document.querySelector("#echo");
-  echo.style.fontSize() *= 2;  
+  echo.style.fontSize() ;  
 }
